@@ -1,5 +1,5 @@
 require './spec/spec_helper'
-
+require 'pry'
 describe AdviceService do
   before(:each) do
     @a = AdviceService.new
