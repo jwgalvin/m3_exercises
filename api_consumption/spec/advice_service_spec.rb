@@ -1,5 +1,7 @@
 require './spec/spec_helper'
+require 'advice_service'
 require 'pry'
+
 describe AdviceService do
   before(:each) do
     @a = AdviceService.new
@@ -11,7 +13,7 @@ describe AdviceService do
 
   it 'can find a random piece of advice' do
     random = @a.random
-
+      #binding.pry
     expect(random["slip"]).to have_key("id")
     expect(random["slip"]).to have_key("advice")
   end

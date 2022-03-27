@@ -1,5 +1,6 @@
 require 'spec_helper'
-
+require 'chuck_service'
+require 'pry'
 describe ChuckService do
   before(:each) do
     @c = ChuckService.new
@@ -37,7 +38,7 @@ describe ChuckService do
 
   it 'can search for a joke' do
     search_results = @c.search("snakes")
-
+    binding.pry
     expect(search_results).to have_key("total")
     expect(search_results).to have_key("result")
     expect(search_results["result"][0]).to have_key("categories")
